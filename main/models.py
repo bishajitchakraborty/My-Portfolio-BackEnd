@@ -1,10 +1,10 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 class About(models.Model):
     id = models.AutoField(primary_key=True)
     image = models.ImageField(null=True, blank=True)
-    description = models.TextField(null=True, blank=True)
+    description = RichTextField(null=True, blank=True)
 
 
 class Contact(models.Model):
